@@ -1,0 +1,15 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "Professional Portfolio",
+  "main": "scripts.js",
+  "scripts": {
+    "sass": "sass --watch .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Artea Wright",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}
