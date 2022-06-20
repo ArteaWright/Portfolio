@@ -1,0 +1,98 @@
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.portfolio__intro {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.portfolio__intro .intro__summary, .portfolio__intro .intro__image {
+  width: 50%;
+  height: 85vh;
+  padding: 20px;
+  background-color: #D9D9D9;
+  border: 6px solid white;
+}
+.portfolio__intro .intro__summary .info__summary__id, .portfolio__intro .intro__image .info__summary__id {
+  display: flex;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.portfolio__intro .intro__summary .info__summary__id .portfolio__buttons, .portfolio__intro .intro__image .info__summary__id .portfolio__buttons {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio__intro .intro__image {
+  background: url("/assets/officeImage.png") no-repeat center center;
+  background-size: cover;
+}
+.portfolio__intro button {
+  background-color: #83CD29;
+  border: 2px solid #83CD29;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 2%;
+}
+.portfolio__intro .portfolio__work {
+  width: 40%;
+  margin: 2% 0;
+}
+
+.portfolio__projects {
+  width: 100%;
+  height: 85.55vh;
+  background-color: #C2BFBF;
+  border: 6px solid white;
+  display: flex;
+}
+.portfolio__projects .project__react, .portfolio__projects .project__api, .portfolio__projects .project__node, .portfolio__projects .project__angular {
+  z-index: 1;
+  width: 20%;
+  height: 65vh;
+  background: rgba(71, 71, 74, 0.4039215686);
+  border: 6px solid white;
+  margin: auto 3%;
+  text-align: center;
+  color: #ffffff;
+}
+.portfolio__projects .project__info {
+  width: 80%;
+  height: 25vh;
+  background: rgba(22, 22, 20, 0.4117647059);
+  border: 6px solid white;
+  margin: 2% auto;
+}
+.portfolio__projects .project__info .project-icons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.portfolio__projects .project__info .project-icons .icon {
+  width: 20%;
+  height: 5vh;
+  background-color: rgba(0, 0, 0, 0.452);
+  margin: 5% auto;
+}
+.portfolio__projects .project__info .project__summary {
+  margin: 10% auto;
+  width: 100%;
+}
+
+.portfolio__footer {
+  width: 100%;
+  height: 11vh;
+  background-color: #A4A1A1;
+  border: 6px solid white;
+  color: #ffffff;
+}
+.portfolio__footer p {
+  margin: 2% auto;
+  width: 30%;
+}
+
+/*# sourceMappingURL=styles.css.map */

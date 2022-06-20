@@ -4,7 +4,7 @@
   "description": "Professional Portfolio",
   "main": "scripts.js",
   "scripts": {
-    "sass": "sass --watch .",
+    "sass":"sass --watch .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Artea Wright",
