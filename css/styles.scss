@@ -11,6 +11,7 @@ $text: #ffffff;
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     margin: 0;
 }
 
@@ -20,57 +21,104 @@ $text: #ffffff;
     width: 100%;
     display: flex;
     flex-direction: row;
-    .intro__summary {
+
+    .portfolio__summary {
         width: 50%;
         height: 85vh;
         padding:20px;
         background-color: $top-background;
         border: 6px solid white;
 
-        .info__summary__id {
+        .portfolio__name-and-title {
             display: flex;
             display: flex;
             justify-content: space-around;
             padding: 20px;
-            .portfolio__buttons {
+
+            .portfolio__links {
                 display: flex;
                 flex-direction: column;
             }
         }
     }
 
-    .intro__image {
-        @extend .intro__summary;
+    .portfolio__image {
+        @extend .portfolio__summary;
         background: url('/assets/officeImage.png') no-repeat center center;
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        .portfolio__image-icon{
+            width: 200px;
+            height: 200px;
+            
+        }
+
+        .react{
+            position: absolute;
+            top: 5%;
+            left: 25%;
+        }
+
+        .angular {
+            @extend .react;
+            top: 18%;
+        }
+
+        .node {
+            @extend .react;
+            top: 33%;
+        }
+       
     }
     
-    button {
+    .portfolio__link-email {
         background-color: $button;
         border: 2px solid $button;
+        text-decoration: none;
+        color: black;
+        width: fit-content;
+        padding: 2px 20px;
         font-weight: 600;
         cursor: pointer;
         margin: 2%;
+
+        &:hover {
+            background-color: black;
+            border: 2px solid black;
+            color: $button;
+        }
     }
 
-    .portfolio__work{
-        width: 40%;
-        margin: 2% 0;
+    .portfolio__link-download {
+        @extend .portfolio__link-email;
+        padding: 2px 30px;
     }
+
+    .portfolio__link-projects {
+        @extend .portfolio__link-download;
+    }
+
+    .portfolio__paragrapgh{
+        margin-bottom: 5%;
+    }
+
 }
 
 
 
 // Project section 
 
-.portfolio__projects {
+#portfolio__projects {
     width: 100%;
     height: 85.55vh; 
     background-color:$mid-background;
     border: 6px solid white;
     display: flex;
     
-    .project__react {
+    .portfolio__project__react {
         z-index: 1;
         width: 20%;
         height: 65vh;
@@ -83,24 +131,25 @@ $text: #ffffff;
     }
 
     .project__angular {
-        @extend .project__react;
+        @extend .portfolio__project__react;
     }
 
     .project__node {
-        @extend .project__react;
+        @extend .portfolio__project__react;
     }
 
     .project__api {
-        @extend .project__react
+        @extend .portfolio__project__react;
     }
 
-    .project__info{
+    .portfolio__project-info {
         width: 80%;
-        height: 25vh;
-        background: $sumContainers;
+        height: 20vh;
+        background: rgba(22, 22, 20, 0.4117647059);
         border: 6px solid white;
         margin: 2% auto;
-        .project-icons {
+
+        .portfolio__project-icons{
             width: 100%;
             display: flex;
             flex-direction: row;

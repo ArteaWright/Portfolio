@@ -1,6 +1,7 @@
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   margin: 0;
 }
 
@@ -9,47 +10,76 @@
   display: flex;
   flex-direction: row;
 }
-.portfolio__intro .intro__summary, .portfolio__intro .intro__image {
+.portfolio__intro .portfolio__summary, .portfolio__intro .portfolio__image {
   width: 50%;
   height: 85vh;
   padding: 20px;
   background-color: #D9D9D9;
   border: 6px solid white;
 }
-.portfolio__intro .intro__summary .info__summary__id, .portfolio__intro .intro__image .info__summary__id {
+.portfolio__intro .portfolio__summary .portfolio__name-and-title, .portfolio__intro .portfolio__image .portfolio__name-and-title {
   display: flex;
   display: flex;
   justify-content: space-around;
   padding: 20px;
 }
-.portfolio__intro .intro__summary .info__summary__id .portfolio__buttons, .portfolio__intro .intro__image .info__summary__id .portfolio__buttons {
+.portfolio__intro .portfolio__summary .portfolio__name-and-title .portfolio__links, .portfolio__intro .portfolio__image .portfolio__name-and-title .portfolio__links {
   display: flex;
   flex-direction: column;
 }
-.portfolio__intro .intro__image {
+.portfolio__intro .portfolio__image {
   background: url("/assets/officeImage.png") no-repeat center center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-.portfolio__intro button {
+.portfolio__intro .portfolio__image .portfolio__image-icon {
+  width: 200px;
+  height: 200px;
+}
+.portfolio__intro .portfolio__image .react, .portfolio__intro .portfolio__image .node, .portfolio__intro .portfolio__image .angular {
+  position: absolute;
+  top: 5%;
+  left: 25%;
+}
+.portfolio__intro .portfolio__image .angular {
+  top: 18%;
+}
+.portfolio__intro .portfolio__image .node {
+  top: 33%;
+}
+.portfolio__intro .portfolio__link-email, .portfolio__intro .portfolio__link-download, .portfolio__intro .portfolio__link-projects {
   background-color: #83CD29;
   border: 2px solid #83CD29;
+  text-decoration: none;
+  color: black;
+  width: fit-content;
+  padding: 2px 20px;
   font-weight: 600;
   cursor: pointer;
   margin: 2%;
 }
-.portfolio__intro .portfolio__work {
-  width: 40%;
-  margin: 2% 0;
+.portfolio__intro .portfolio__link-email:hover, .portfolio__intro .portfolio__link-download:hover, .portfolio__intro .portfolio__link-projects:hover {
+  background-color: black;
+  border: 2px solid black;
+  color: #83CD29;
+}
+.portfolio__intro .portfolio__link-download, .portfolio__intro .portfolio__link-projects {
+  padding: 2px 30px;
+}
+.portfolio__intro .portfolio__paragrapgh {
+  margin-bottom: 5%;
 }
 
-.portfolio__projects {
+#portfolio__projects {
   width: 100%;
   height: 85.55vh;
   background-color: #C2BFBF;
   border: 6px solid white;
   display: flex;
 }
-.portfolio__projects .project__react, .portfolio__projects .project__api, .portfolio__projects .project__node, .portfolio__projects .project__angular {
+#portfolio__projects .portfolio__project__react, #portfolio__projects .project__api, #portfolio__projects .project__node, #portfolio__projects .project__angular {
   z-index: 1;
   width: 20%;
   height: 65vh;
@@ -59,26 +89,26 @@
   text-align: center;
   color: #ffffff;
 }
-.portfolio__projects .project__info {
+#portfolio__projects .portfolio__project-info {
   width: 80%;
-  height: 25vh;
+  height: 20vh;
   background: rgba(22, 22, 20, 0.4117647059);
   border: 6px solid white;
   margin: 2% auto;
 }
-.portfolio__projects .project__info .project-icons {
+#portfolio__projects .portfolio__project-info .portfolio__project-icons {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.portfolio__projects .project__info .project-icons .icon {
+#portfolio__projects .portfolio__project-info .portfolio__project-icons .icon {
   width: 20%;
   height: 5vh;
   background-color: rgba(0, 0, 0, 0.452);
   margin: 5% auto;
 }
-.portfolio__projects .project__info .project__summary {
+#portfolio__projects .portfolio__project-info .project__summary {
   margin: 10% auto;
   width: 100%;
 }

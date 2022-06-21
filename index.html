@@ -13,10 +13,10 @@
 <body>
     <main class="portfolio">
         <!-- Introduction -->
-        <section class="portfolio__intro">
-            <div class="intro__summary">
+        <header class="portfolio__intro">
+            <section class="portfolio__summary">
                  <!-- Name, photo, summary, and important links -->
-                 <div class="info__summary__id">
+                 <div class="portfolio__name-and-title">
                     <img src="/assets/logo.png" alt=""/>
                     <div>
                         <h1>Artea Wright</h1>
@@ -25,9 +25,11 @@
                             Icons Icons Icons Icons
                         </div>
 
-                        <div class="portfolio__buttons">
-                            <button>Email Me</button>
-                            <button>Download My Resume</button>
+                        <div class="portfolio__links">
+                            <a class="portfolio__link-email" href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWsCbJGMWBpVmhKJlfPtzfkDjsMMdWtrVNVXpRLJSLhdKbDwjQDGbmtnpjgxrDPRsKGSMjxcQ">Email Me</a>
+
+                            <!-- Replace Resume Google Drive Share -->
+                            <a class="portfolio__link-download" href="">Download My Resume</a>
                         </div>
                         
                     </div>
@@ -35,34 +37,39 @@
                  </div>
                 
 
-                 <h2>About Me</h2>
-                <p>I enjoy solving small to complex problems using creative solutions. <br>
+                <h2 class="portfolio__about-me">About Me</h2>
+                <p class="portfolio__paragrapgh">I enjoy solving small to complex problems using creative solutions. <br>
                     Keeping accessibility top of mind, I utilize front-end technologies like <br> React and Angular to develop fun user interfaces that are mainly focused on education.
                 </p>
-                <button class="portfolio__work">Check out some of my work...</button>
-            </div>
 
-            <!-- Image  -->
-            <div class="intro__image">
+                <a class="portfolio__link-projects" href="#portfolio__projects">
+                    Check out some of my work...
+                </a>
+            </section>
+
+            <!-- Reference language proficiency using icons  -->
+            <div class="portfolio__image">
                 <!-- Add react, angular, and node icons -->
-
+                <img class="portfolio__image-icon react" src="/assets/react.png" alt="Experince using React"/>
+                <img class="portfolio__image-icon angular" src="/assets/Angular.png" alt="Experince using Angular"/>
+                <img class="portfolio__image-icon node" src="/assets/Nodejs.png" alt="Experince using Node JS"/>
             </div>
-        </section>
+        </header>
 
 
         <!-- Projects -->
-        <section class="portfolio__projects">
+        <section id="portfolio__projects">
 
             <!-- Project #1 -->
-            <div class="project__react">
+            <div class="portfolio__project__react">
                 <h2 class="project__title">
                     Project Title
                 </h2>
-                <img src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
+                <img class="portfolio__project__image" src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
 
                 <!-- Technology used (icons) -->
-                <div class="project__info">
-                    <div class="project-icons">
+                <div class="portfolio__project-info">
+                    <div class="portfolio__project-icons">
                         <div class="icon">icon</div>
                         <div class="icon">icon</div>
                         <div class="icon">icon</div>
@@ -76,70 +83,75 @@
             </div>
 
             <!-- Project #2 -->
-            <div class="project__angular">
-                <h2 class="project__title">
-                    Project Title
-                </h2>
-                <img src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
+          <!-- Project #1 -->
+          <div class="portfolio__project__react">
+            <h2 class="project__title">
+                Project Title
+            </h2>
+            <img class="portfolio__project__image" src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
 
-                  <!-- Technology used (icons) -->
-                <div class="project__info">
-                    <div class="project-icons">
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
-                    </div>
-                    <p class="project__summary">
-                        Summary of Project goes here. 
-                        Summary of Project goes here.
-                        Summary of Project goes here.
-                    </p>
+            <!-- Technology used (icons) -->
+            <div class="portfolio__project-info">
+                <div class="portfolio__project-icons">
+                    <div class="icon">icon</div>
+                    <div class="icon">icon</div>
+                    <div class="icon">icon</div>
                 </div>
+                <p class="project__summary">
+                    Summary of Project goes here. 
+                    Summary of Project goes here.
+                    Summary of Project goes here.
+                </p>
             </div>
+        </div>
 
              <!-- Project #3 -->
-            <div class="project__node">
-                <h2 class="project__title">
-                    Project Title
-                </h2>
-                <img src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
+        <!-- Project #1 -->
+        <div class="portfolio__project__react">
+            <h2 class="project__title">
+                Project Title
+            </h2>
+            <img class="portfolio__project__image" src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
 
-                <!-- Technology used (icons) -->
-                <div class="project__info">
-                    <div class="project-icons">
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
-                    </div>
-                    <p class="project__summary">
-                        Summary of Project goes here. 
-                        Summary of Project goes here.
-                        Summary of Project goes here.
-                    </p>
+            <!-- Technology used (icons) -->
+            <div class="portfolio__project-info">
+                <div class="portfolio__project-icons">
+                    <div class="icon">icon</div>
+                    <div class="icon">icon</div>
+                    <div class="icon">icon</div>
                 </div>
+                <p class="project__summary">
+                    Summary of Project goes here. 
+                    Summary of Project goes here.
+                    Summary of Project goes here.
+                </p>
             </div>
+        </div>
+            
 
             <!-- Project #4 -->
-            <div class="project__api">
-                <h2 class="project__title">
-                    Project Title
-                </h2>
-                <img src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
+       <!-- Project #1 -->
+       <div class="portfolio__project__react">
+            <h2 class="project__title">
+                Project Title
+            </h2>
+            <img class="portfolio__project__image" src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
 
-               <!-- Technology used (icons) -->
-                <div class="project__info">
-                    <div class="project-icons">
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
-                    </div>
-                    <p class="project__summary">
-                        Summary of Project goes here. 
-                        Summary of Project goes here.
-                        Summary of Project goes here.
-                    </p>
+        <!-- Technology used (icons) -->
+            <div class="portfolio__project-info">
+                <div class="portfolio__project-icons">
+                    <div class="icon">icon</div>
+                    <div class="icon">icon</div>
+                    <div class="icon">icon</div>
                 </div>
+                <p class="project__summary">
+                    Summary of Project goes here. 
+                    Summary of Project goes here.
+                    Summary of Project goes here.
+                </p>
             </div>
+        </div>
+            
 
         </section>
         
