@@ -15,8 +15,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-style: solid white;
-  border-width: 6px 6px 0px;
+  border: 6px solid white;
   justify-content: center;
   background-color: #D9D9D9;
 }
@@ -134,7 +133,7 @@
   font-size: 11px;
 }
 
-@media (max-width: 375px) {
+@media screen and (max-width: 375px) {
   .portfolio__intro .portfolio__summary .portfolio__name-and-title, .portfolio__intro .portfolio__image .portfolio__name-and-title {
     display: flex;
     flex-direction: column;
@@ -142,6 +141,10 @@
   }
   .portfolio__intro .portfolio__summary .portfolio__name-and-title .portfolio__headshot, .portfolio__intro .portfolio__image .portfolio__name-and-title .portfolio__headshot {
     width: 95px;
+  }
+  .portfolio__intro .portfolio__information .portfolio__link-email, .portfolio__intro .portfolio__information .portfolio__link-download,
+.portfolio__intro .portfolio__information .portfolio__link-projects {
+    font-size: 12px;
   }
   #portfolio__projects .portfolio__project__react,
 #portfolio__projects .portfolio__project__angular,
@@ -151,7 +154,7 @@
     flex-direction: column;
   }
 }
-@media (min-width: 820px) {
+@media screen and (min-width: 820px) {
   .portfolio__intro {
     display: flex;
   }
@@ -168,7 +171,7 @@
     grid-template-columns: auto auto;
   }
 }
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
   #portfolio__projects {
     display: flex;
     width: 100%;

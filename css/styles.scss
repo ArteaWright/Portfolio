@@ -27,8 +27,7 @@ $text: #ffffff;
         display: flex;
         align-items: center;
         flex-direction: column;
-        border-style: solid white;
-        border-width: 6px 6px 0px;
+        border: 6px solid white;
         justify-content: center;
         background-color: $top-background;
         
@@ -181,8 +180,9 @@ $text: #ffffff;
 
 // media queries - Desktop and tablet 
 
-@media (max-width:375px) {
+@media screen and (max-width: 375px) {
     .portfolio__intro {
+
         .portfolio__summary {
             .portfolio__name-and-title {
                 display: flex;
@@ -194,6 +194,14 @@ $text: #ffffff;
                 }
             }
         }
+
+        .portfolio__information {
+            .portfolio__link-email {
+                font-size: 12px;
+            }
+        }
+
+        
     }
 
 
@@ -208,7 +216,7 @@ $text: #ffffff;
     }
 }
 
-@media (min-width: 820px) {
+@media screen and  (min-width: 820px) {
 
 .portfolio__intro {
 
@@ -235,7 +243,7 @@ $text: #ffffff;
      
 }
 
-@media (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 
     #portfolio__projects {
         display: flex;
