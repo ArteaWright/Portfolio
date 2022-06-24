@@ -12,56 +12,79 @@
 </head>
 <body>
     <main class="portfolio">
-        <!-- Introduction -->
+       
+<!---------------->
+<!--INTRODUCTION-->
+<!---------------->
+
         <header class="portfolio__intro">
             <section class="portfolio__summary">
                  <!-- Name, photo, summary, and important links -->
-                 <div class="portfolio__name-and-title">
-                    <img src="/assets/logo.png" alt=""/>
-                    <div>
-                        <h1>Artea Wright</h1>
-                        <h2>Front-End Software Engineer</h2>
-                        <div>
-                            Icons Icons Icons Icons
-                        </div>
 
+                    <!-- First half -->
+                    <div class="portfolio__name-and-title">
+                        <img class="portfolio__headshot" src="/assets/PortfolioImage.jpg" alt=""/>
+                       
+                            <h1>Artea Wright</h1>
+                            <h2 class="portfolio__profession">Front-End Software Engineer</h2>
+                            <div class="portfolio__social-container">
+                                <div>
+                                    <a class="portfolio__social-links" href="https://github.com/ArteaWright?tab=repositories">
+                                        <img class="portfolio__social-icons" src="/assets/Githubicon.png" alt="Link to Github"/>
+                                    </a>
+                                </div>
+                             
+                                  
+                                <div>
+                                    <a class="portfolio__social-links" href="https://www.linkedin.com/in/arteawright/">
+                                        <img class="portfolio__social-icons" src="/assets/LinkedIn.png" alt="Follow on LinkedIn"/>
+                                    </a>
+                                </div>
+                               
+                               <div>
+                                <a class="portfolio__social-links" href="/">
+                                    <img class="portfolio__social-icons" src="/assets/gmailicon.png" alt="Email Me"/>
+                                </a>
+                               </div>
+                             
+                            </div>
+                    </div>
+
+                    <!-- Second half -->
+                    <div class="portfolio__information">
                         <div class="portfolio__links">
-                            <a class="portfolio__link-email" href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWsCbJGMWBpVmhKJlfPtzfkDjsMMdWtrVNVXpRLJSLhdKbDwjQDGbmtnpjgxrDPRsKGSMjxcQ">Email Me</a>
+                            <a class="portfolio__link-email" href="https://mail.google.com/mail/u/1/#inbox?compose=DmwnWsCbJGMWBpVmhKJlfPtzfkDjsMMdWtrVNVXpRLJSLhdKbDwjQDGbmtnpjgxrDPRsKGSMjxcQ">
+                                Email Me
+                            </a>
 
                             <!-- Replace Resume Google Drive Share -->
                             <a class="portfolio__link-download" href="">Download My Resume</a>
                         </div>
-                        
+
+                        <h2 class="portfolio__about-me">About Me</h2>
+                        <p class="portfolio__paragrapgh">I enjoy solving small to complex problems using creative solutions. <br>
+                            Keeping accessibility top of mind, I utilize front-end technologies like <br> React and Angular to develop fun user interfaces that are mainly focused on education.
+                        </p>
+        
+                        <a class="portfolio__link-projects" href="#portfolio__projects">
+                            Check out some of my work...
+                        </a>
                     </div>
-                  
-                 </div>
-                
-
-                <h2 class="portfolio__about-me">About Me</h2>
-                <p class="portfolio__paragrapgh">I enjoy solving small to complex problems using creative solutions. <br>
-                    Keeping accessibility top of mind, I utilize front-end technologies like <br> React and Angular to develop fun user interfaces that are mainly focused on education.
-                </p>
-
-                <a class="portfolio__link-projects" href="#portfolio__projects">
-                    Check out some of my work...
-                </a>
             </section>
 
             <!-- Reference language proficiency using icons  -->
-            <div class="portfolio__image">
-                <!-- Add react, angular, and node icons -->
-                <img class="portfolio__image-icon react" src="/assets/react.png" alt="Experince using React"/>
-                <img class="portfolio__image-icon angular" src="/assets/Angular.png" alt="Experince using Angular"/>
-                <img class="portfolio__image-icon node" src="/assets/Nodejs.png" alt="Experince using Node JS"/>
-            </div>
+            <div class="portfolio__image"></div>
         </header>
 
 
-        <!-- Projects -->
+<!-------------->
+<!-- PROJECTS -->
+<!-------------->
+
         <section id="portfolio__projects">
 
             <!-- Project #1 -->
-            <div class="portfolio__project__react">
+            <div class="portfolio__project__react react">
                 <h2 class="project__title">
                     Project Title
                 </h2>
@@ -70,9 +93,8 @@
                 <!-- Technology used (icons) -->
                 <div class="portfolio__project-info">
                     <div class="portfolio__project-icons">
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
-                        <div class="icon">icon</div>
+                        <img class="icon" src="/assets/react.png" alt=""/>
+                        <img class="icon" src="/assets/Nodejs.png" alt=""/>
                     </div>
                     <p class="project__summary">
                         Summary of Project goes here. 
@@ -83,8 +105,7 @@
             </div>
 
             <!-- Project #2 -->
-          <!-- Project #1 -->
-          <div class="portfolio__project__react">
+          <div class="portfolio__project__angular angular">
             <h2 class="project__title">
                 Project Title
             </h2>
@@ -93,9 +114,8 @@
             <!-- Technology used (icons) -->
             <div class="portfolio__project-info">
                 <div class="portfolio__project-icons">
-                    <div class="icon">icon</div>
-                    <div class="icon">icon</div>
-                    <div class="icon">icon</div>
+                    <img class="icon" src="/assets/react.png" alt=""/>
+                    <img class="icon" src="/assets/Nodejs.png" alt=""/>
                 </div>
                 <p class="project__summary">
                     Summary of Project goes here. 
@@ -106,8 +126,7 @@
         </div>
 
              <!-- Project #3 -->
-        <!-- Project #1 -->
-        <div class="portfolio__project__react">
+        <div class="portfolio__project__node node">
             <h2 class="project__title">
                 Project Title
             </h2>
@@ -116,9 +135,8 @@
             <!-- Technology used (icons) -->
             <div class="portfolio__project-info">
                 <div class="portfolio__project-icons">
-                    <div class="icon">icon</div>
-                    <div class="icon">icon</div>
-                    <div class="icon">icon</div>
+                    <img class="icon" src="/assets/react.png" alt=""/>
+                    <img class="icon" src="/assets/Nodejs.png" alt=""/>
                 </div>
                 <p class="project__summary">
                     Summary of Project goes here. 
@@ -130,28 +148,26 @@
             
 
             <!-- Project #4 -->
-       <!-- Project #1 -->
-       <div class="portfolio__project__react">
-            <h2 class="project__title">
-                Project Title
-            </h2>
-            <img class="portfolio__project__image" src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
-
-        <!-- Technology used (icons) -->
-            <div class="portfolio__project-info">
-                <div class="portfolio__project-icons">
-                    <div class="icon">icon</div>
-                    <div class="icon">icon</div>
-                    <div class="icon">icon</div>
+            <div class="portfolio__project__api api">
+                <h2 class="project__title">
+                    Project Title
+                </h2>
+                <img class="portfolio__project__image" src="/assets/logo.png" alt="Coming Soon" title="Coming Soon"/>
+    
+                <!-- Technology used (icons) -->
+                <div class="portfolio__project-info">
+                    <div class="portfolio__project-icons">
+                        <img class="icon" src="/assets/react.png" alt=""/>
+                        <img class="icon" src="/assets/Nodejs.png" alt=""/>
+                    </div>
+                    <p class="project__summary">
+                        Summary of Project goes here. 
+                        Summary of Project goes here.
+                        Summary of Project goes here.
+                    </p>
                 </div>
-                <p class="project__summary">
-                    Summary of Project goes here. 
-                    Summary of Project goes here.
-                    Summary of Project goes here.
-                </p>
             </div>
-        </div>
-            
+      
 
         </section>
         
