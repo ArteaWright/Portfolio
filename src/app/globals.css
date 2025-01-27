@@ -19,3 +19,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Hide the portal div. Do not remove */
+nextjs-portal {
+  display: none;
+}
