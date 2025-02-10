@@ -1,14 +1,26 @@
-import "./globals.css";
+import About from "./components/About/about";
+import Container from "./components/Container/container";
 
 export default function Home() {
   return (
     <>
-    <div className="row-span-5">01</div>
-    <div className="col-span-3">02</div>
-    <div className="col-span-2 row-span-3">03</div>
-    <div className="row-span-3">04</div>
-    <div className="col-start-2 row-start-5">05</div>
-    <div className="col-start-3 row-start-5 col-span-2">06</div>
+      <About/>
+      <Container className="col-span-6">
+        <h1>(Software Engineer)</h1>
+        <h2>Software solutions for real world problems</h2>
+      </Container>
+      <Container className="col-span-3 row-span-3">
+        <h2>More About Me</h2>
+      </Container>
+      <Container className="col-span-3 row-span-4">
+        <h2>See My Work</h2>
+      </Container>
+      <Container className="col-span-3 row-span-2">
+        <h2>Future projects & interests</h2>
+      </Container>
+      <Container className="col-span-3">
+        <h2>Work With Me</h2>
+      </Container>
     </>
   );
 }

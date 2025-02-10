@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="grid">
         <main
-          className={`${encodeSansCondensed.variable} antialiased grid grid-flow-row-dense grid-cols-4 grid-rows-5 gap-4`}
+          className={`${encodeSansCondensed.variable} antialiased grid grid-cols-8 grid-rows-6 gap-6`}
         >
           {children}
         </main>
