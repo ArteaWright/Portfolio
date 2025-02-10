@@ -1,0 +1,46 @@
+.about {
+    color: var(--foreground);
+    background-color: var(--magenta);
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.profile-pic {
+    border-radius: 100%;
+}
+
+.about-text {
+    font-weight: 100;
+    line-height: normal;
+}
+
+.about-greeting, 
+.about-name {
+    font-size: 40px;
+}
+
+.about-name {
+    font-weight: 700;
+}
+
+.about-info {
+    display: flex;
+    gap: 20px;
+}
+
+.about-info-item > a {
+    border-bottom: 1px dashed white;
+}
+
+.about-info-item {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.about-buttons {
+    display: flex;
+    gap: 20px;
+}
