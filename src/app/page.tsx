@@ -1,101 +1,251 @@
+"use client";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import "./globals.css";
+import JotformChatbot from "./components/chatbot/chatbot";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [menuOpen, setMenuOpen] = useState(false);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  return (
+    <>
+      {/* Hamburger Menu Button */}
+      <button className={menuOpen ? "hamburger hamburger-close" : "hamburger"}>
+        {menuOpen ? (
+          <Image
+            src="/menu-close.svg"
+            alt="Close Menu"
+            width={30}
+            height={30}
+            onClick={() => setMenuOpen(false)}
+          />
+        ) : (
+          <Image
+            src="/menu-open.svg"
+            alt="Open Menu"
+            width={30}
+            height={30}
+            onClick={() => setMenuOpen(true)}
+          />
+        )}
+      </button>
+
+      <div className="portfolio">
+        {/* Sidebar */}
+        <nav
+          className={
+            menuOpen ? "portfolio-sidebar sidebar-open" : "portfolio-sidebar"
+          }
+        >
+          <Link href="/">
+            <Image src="/sign_sherb.png" alt="Logo" width={50} height={50} />
+          </Link>
+          <Link className="vertical-text" href="/#services">
+            What I do
+          </Link>
+          <Link className="vertical-text" href="/#projects">
+            My Work
+          </Link>
+          <Link className="vertical-text" href="/#thoughts">
+            My Thoughts
+          </Link>
+        </nav>
+
+        {/* Main Content */}
+        <main>
+          <div className="portfolio-hero">
+            <div className="portfolio-hero-image">
+              <h1>
+                I&apos;m
+                <br />
+                Artea Wright
+              </h1>
+
+              <div className="words-container">
+                <div className="words">
+                  <h2>Optimizing Systems</h2>
+                  <h2>Enhancing Efficiency</h2>
+                  <h2>Engineering the Future</h2>
+                </div>
+              </div>
+
+              <Image
+                className="image"
+                src="/profile.svg"
+                alt="Profile picture of Artea Wright"
+                width={600}
+                height={100}
+              />
+            </div>
+            <div className="portfolio-hero-video">
+              <h2>Watch My Story</h2>
+              <iframe
+                width="590"
+                height="345"
+                src="https://www.youtube.com/embed/RpYoH71dTeE?si=qab_jIlJBFLKioIR"
+                title="YouTube video player; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          {/* Client Banner */}
+          <div className="portfolio-client-companies">
+            <div className="clients-container">
+              <div className="client">Wells Fargo</div>
+              <div className="client">Truist</div>
+              <div className="client">TechTrap</div>
+            </div>
+
+            <div className="clients-container" aria-hidden="true">
+              <div className="client">Wells Fargo</div>
+              <div className="client">Truist</div>
+              <div className="client">TechTrap</div>
+            </div>
+          </div>
+
+          {/* I help with - open to opportunities */}
+          <div id="services" className="portfolio-services">
+            <h2>I help with...</h2>
+            <div className="services">
+              <div className="service">
+                <h3>Systems & Workflow Optimization</h3>
+                <p className="description">
+                Having smooth workflows often helps in improving productivity, but often this involves using data to find opportunities to reduce waste and streamline processes to cut out the fluff for better results, more release, and an agile workflow. .
+                </p>
+              </div>
+              <div className="service">
+                <h3> Software Engineering & Automation</h3>
+                <p className="description">
+                  User experience is top priority when developing software solutions and products, so delivering scalable and maintainable applications that improve performance helps achieve this.
+                </p>
+              </div>
+              <div className="service">
+                <h3>AI Integration</h3>
+                <p className="description">
+                Adopting cutting-edge technology can enhance scalability and competitiveness. Whether implementing AI, blockchain, and automation solutions tailored to business needs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Portfolio Projects */}
+          <div id="projects" className="portfolio-projects">
+            <h2>See my work...</h2>
+            <div className="projects">
+              <Link href='/'>
+              <div className="project">
+                <h3>Project 1</h3>
+                <p className="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus vero earum quibusdam quod fugit nobis perspiciatis
+                  unde, rem repellat cum, voluptate illum minus mollitia, quidem
+                  quae voluptates consectetur aliquam cupiditate.
+                </p>
+              </div>
+              </Link>
+              <Link href='/'>
+              <div className="project">
+                <h3>Project 2</h3>
+                <p className="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus vero earum quibusdam quod fugit nobis perspiciatis
+                  unde, rem repellat cum, voluptate illum minus mollitia, quidem
+                  quae voluptates consectetur aliquam cupiditate.
+                </p>
+              </div>
+              </Link>
+              <Link href='/'>
+              <div className="project">
+                <h3>Project 3</h3>
+                <p className="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus vero earum quibusdam quod fugit nobis perspiciatis
+                  unde, rem repellat cum, voluptate illum minus mollitia, quidem
+                  quae voluptates consectetur aliquam cupiditate.
+                </p>
+              </div>
+              </Link>
+              <Link href='/'>
+              <div className="project">
+                <h3>Project 4</h3>
+                <p className="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus vero earum quibusdam quod fugit nobis perspiciatis
+                  unde, rem repellat cum, voluptate illum minus mollitia, quidem
+                  quae voluptates consectetur aliquam cupiditate.
+                </p>
+              </div>
+              </Link>
+              <Link href='/'>
+              <div className="project">
+                <h3>Project 5</h3>
+                <p className="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus vero earum quibusdam quod fugit nobis perspiciatis
+                  unde, rem repellat cum, voluptate illum minus mollitia, quidem
+                  quae voluptates consectetur aliquam cupiditate.
+                </p>
+              </div>
+              </Link>
+              <Link href='/'>
+              <div className="project">
+                <h3>Project 6</h3>
+                <p className="description">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Doloribus vero earum quibusdam quod fugit nobis perspiciatis
+                  unde, rem repellat cum, voluptate illum minus mollitia, quidem
+                  quae voluptates consectetur aliquam cupiditate.
+                </p>
+              </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* Thoughts and appearances */}
+          <div id="thoughts" className="portfolio-thoughts">
+            <div className="thoughts-container">
+              <h2>Appearances, podacsts, & blogs...</h2>
+              <p>
+                Add a description and some information about yourself of your
+                appearance and community participations here.{" "}
+              </p>
+              <button>Email Me</button>
+            </div>
+
+            <Link
+            className="thoughts-link"
+            href="https://www.linkedin.com/in/arteawright/"
+            >
+              <Image
+                className="thoughts-image"
+                src={"/podcast-ep.svg"}
+                alt="Thoughts"
+                width={300}
+                height={400}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            </Link>
+            <Link className="thoughts-link" href="">
+              <Image
+                className="thoughts-image"
+                src={"/coming_soon.svg"}
+                alt="Thoughts"
+                width={300}
+                height={400}
+              />
+            </Link>
+          </div>
+
+          <footer id="contact" className="portfolio-footer">
+            <div className="footer-content">
+              <p>Copyright &#169; 2025 Artea Wright. All Right Reserved.</p>
+                <JotformChatbot />
+            </div>
+          </footer>
+        </main>
+      </div>
+    </>
   );
 }
