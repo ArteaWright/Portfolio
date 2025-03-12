@@ -160,6 +160,11 @@ button:active {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   text-align: center;
+  padding: var(--padding-sm) var(--padding-xl);
+}
+
+.vertical-text:hover {
+  background-color:var(--background);
 }
 
 main::-webkit-scrollbar {
