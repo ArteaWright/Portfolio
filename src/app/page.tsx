@@ -107,7 +107,7 @@ export default function Home() {
           </div>
 
           {/* I help with - open to opportunities */}
-          <div id="services" className="portfolio-services">
+          <section id="services" className="portfolio-services">
             <h2>I help with...</h2>
             <div className="services">
               <div className="service">
@@ -129,10 +129,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* Portfolio Projects */}
-          <div id="projects" className="portfolio-projects">
+          <section id="projects" className="portfolio-projects">
             <h2>See my work...</h2>
             <div className="projects">
               <Link href='/'>
@@ -202,7 +202,20 @@ export default function Home() {
               </div>
               </Link>
             </div>
-          </div>
+          </section>
+
+          {/* Portfolio call to actions */}
+          <section className="portfolio-call-to-action">
+           <div className="calls">
+              <h2>Ready to get to work?</h2>
+           </div>
+
+           <div className="actions">
+           <p>&#x2713; Looking to automate your business workflows? <a className="action" href="https://calendly.com/arteawright/30min">Let&apos;s Connect</a></p>
+           <p>&#x2713; Looking to automate your business workflows? <a className="action" href="https://calendly.com/arteawright/30min">Schedule a consultation</a></p>
+           <p>&#x2713; Looking to automate your business workflows? <a className="action" href="">Download my resume</a></p>
+           </div>
+          </section>
 
           {/* Thoughts and appearances */}
           <div id="thoughts" className="portfolio-thoughts">

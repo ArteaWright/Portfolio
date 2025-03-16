@@ -101,12 +101,13 @@ a {
   color: var(--text);
 }
 
-a:hover h3 {
+a:hover h3, 
+.action:hover {
   color: var(--hover);
   text-decoration: underline;
 }
 
-button:not(:first-child) {
+button {
   width: 200px;
   padding: var(--padding-md);
   background-color: var(--accent);
@@ -273,6 +274,7 @@ main {
   font-weight: var(--font-weight-bold);
 }
 
+
 /* Services */
 
 .portfolio-services {
@@ -335,6 +337,17 @@ main {
   justify-content: space-between;
   padding: var(--padding-md);
   scroll-snap-align: start;
+}
+
+/* Call to action  */
+
+.actiion {
+  font-weight: var(--font-weight-bold);
+}
+
+.portfolio-call-to-action {
+  padding: var(--padding-lg) var(--padding-xl);
+  text-align: center;
 }
 
 /* Thoughts and appearances */
@@ -479,18 +492,21 @@ main {
   }
   
   /* Sidebar */
+
   .portfolio-sidebar {
     transform: translateX(-100%);
     width: 10%;
   }
   
   .hamburger {
+    width: 40px;
     display: block;
     background-color: var(--accent);
     margin: var(--margin-md);
     border-radius: var(--border-radius);
     padding: var(--padding-sm);
     position: fixed;
+    z-index: 100;
   }
 
   .hamburger-close {
@@ -504,8 +520,10 @@ main {
   }
 
   /* Services */
-  .portfolio-services {
-    margin: var(--margin-lg);
+  .portfolio-services, 
+  .portfolio-projects {
+    margin: var(--margin-sm)var(--margin-lg);
+    padding: var(--margin-sm) var(--padding-xl);
   }
   .services {
     flex-direction: column;
@@ -518,7 +536,7 @@ main {
   }
 
   .service::after {
-    content: '-';
+    content: '';
     display: block;
     width: 100%;
     height: 1px;
@@ -527,9 +545,12 @@ main {
   }
 
   /* Projects */
-  .portfolio-projects {
-    padding: var(--padding-xl);
-  }
+
+  
+.action {
+  text-decoration: underline;
+  color: var(--accent);
+}
 
   /* Thoughts and appearances */
   .portfolio-thoughts {
