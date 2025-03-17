@@ -133,7 +133,8 @@ export default function Home() {
 
           {/* Portfolio Projects */}
           <section id="projects" className="portfolio-projects">
-            <h2>See my work...</h2>
+            <h2 className="portfolio-projects-web"> &#x2190; Scroll to see my work ...</h2>
+            <h2 className="portfolio-projects-mobile"> &#x2190; Swipe to see my work ...</h2>
             <div className="projects">
               <Link href='/'>
               <div className="project">
@@ -212,7 +213,9 @@ export default function Home() {
 
            <div className="actions">
            <p>&#x2713; Looking to automate your business workflows? <a className="action" href="https://calendly.com/arteawright/30min">Let&apos;s Connect</a></p>
+           <br></br>
            <p>&#x2713; Looking to automate your business workflows? <a className="action" href="https://calendly.com/arteawright/30min">Schedule a consultation</a></p>
+           <br></br>
            <p>&#x2713; Looking to automate your business workflows? <a className="action" href="">Download my resume</a></p>
            </div>
           </section>
