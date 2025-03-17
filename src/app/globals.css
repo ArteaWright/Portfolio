@@ -339,9 +339,14 @@ main {
   scroll-snap-align: start;
 }
 
+.portfolio-projects-mobile {
+  display: none;
+}
+
 /* Call to action  */
 
-.actiion {
+.action {
+  color: var(--accent);
   font-weight: var(--font-weight-bold);
 }
 
@@ -546,11 +551,20 @@ main {
 
   /* Projects */
 
-  
-.action {
-  text-decoration: underline;
-  color: var(--accent);
-}
+  .portfolio-projects-web {
+    display: none;
+  }
+
+  .portfolio-projects-mobile {
+    display: inline-block;
+  }
+
+  /* call to action */
+
+  .action {
+    text-decoration: underline;
+    font-weight: var(--font-weight-bold);
+  }
 
   /* Thoughts and appearances */
   .portfolio-thoughts {
