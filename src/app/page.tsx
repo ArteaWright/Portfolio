@@ -233,7 +233,7 @@ export default function Home() {
 
             <Link
             className="thoughts-link"
-            href="https://www.linkedin.com/in/arteawright/"
+            href="https://open.spotify.com/episode/5CYSOwoFLACaz3ooDtlDfL?si=906d74e7b9d444e1"
             >
               <Image
                 className="thoughts-image"
