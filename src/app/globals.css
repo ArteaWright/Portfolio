@@ -15,15 +15,15 @@
   --foreground-light: #fff;
   --text-light: #000;
   --card-light: #fff;
-  --accent-light: #dd5390;
-  --hover-light: #af4072;
+  --accent-light: #53dd8f;
+  --hover-light: #008c4b;
   
   --background-dark: #1e1e1e;
   --foreground-dark: #2c2c2c;
   --text-dark: #fff;
   --card-dark: #2c2c2c;
-  --accent-dark: #dd5390;
-  --hover-dark: #f186b6;
+  --accent-dark: #53dd8f;
+  --hover-dark: #86f18f;
 
   --gap: 20px;
   --padding-sm: 5px;

@@ -39,7 +39,7 @@ export default function Home() {
           }
         >
           <Link href="/">
-            <Image src="/sign_sherb.png" alt="Logo" width={50} height={50} />
+            <Image src="/sign_green.png" alt="Logo" width={50} height={50} />
           </Link>
           <Link className="vertical-text" href="/#services">
             What I do

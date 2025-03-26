@@ -19,9 +19,9 @@ const JotformChatbot = () => {
           queryParams: ["skipWelcome=1", "maximizable=1"],
           domain: "https://www.jotform.com",
           isDraggable: false,
-          background: "linear-gradient(180deg, #dd5390 0%, #910E3E 100%)",
-          buttonBackgroundColor: "#000000",
-          buttonIconColor: "#fbf0f4",
+          background: "linear-gradient(180deg, #2daf8c 0%, #b8eba9 100%)",
+          buttonBackgroundColor: "#417505",
+          buttonIconColor: "#F8FEEC",
           variant: false,
           customizations: {
             greeting: "Yes",
